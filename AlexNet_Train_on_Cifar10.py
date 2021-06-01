@@ -22,7 +22,7 @@ DATA_FORMAT = 'channels_last'
 log_filepath = 'C:\\Users\\Esrat Maria\\Desktop\\AlexNet'
 
 
-print('--------------------------------------------------------------------------------------------------------')
+print('----------------------------------------------------------------------------------------------------------')
 print('Deep Learning Framework : Keras', keras.__version__)
 print('Number of Classes : ', +num_classes)
 print('Data Augmentation : Yes, Image Data Generator.')
@@ -32,7 +32,7 @@ print('Momentum : 0.9')
 print('Dropout Rate : ', +DROPOUT)
 print('Epoch number should not be less than 15. After 13 epochs the system hits accuracy of 0.7(70%)')
 print('With 25 epochs the accuracy is above 80%')
-print('--------------------------------------------------------------------------------------------------------')
+print('----------------------------------------------------------------------------------------------------------')
 
 
 def color_preprocessing(x_train, x_test):
@@ -56,20 +56,20 @@ def scheduler(epoch):
   return 0.0001
 
 
-# loading cifar10 data
+# loading cifar10 data                                                                               
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 x_train, x_test = color_preprocessing(x_train, x_test)
 
 print(x_train.shape)
-# Building CNN (AlexNet)
+# Building CNN (AlexNet)                                                                             
 
 
 def alexnet(img_input, classes=10):
   # 1st conv layer
   x = Conv2D(96, (11, 11), strides=(4, 4), padding='same',
-             activation='relu', kernel_initializer='uniform')(img_input)  # valid
+             activation='relu', kernel_initializer='uniform')(img_input)  # valid                                   
   x = MaxPooling2D(pool_size=(3, 3), strides=(
       2, 2), padding='same', data_format=DATA_FORMAT)(x)
   x = BatchNormalization()(x)
