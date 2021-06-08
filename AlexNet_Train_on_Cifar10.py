@@ -1,10 +1,10 @@
-import os
-import keras
-from keras.datasets import cifar10
-from keras import backend as K
-from keras.layers import Input, Conv2D, GlobalAveragePooling2D, Dense, BatchNormalization, Activation, MaxPooling2D
-from keras.models import Model
-from keras.layers import concatenate, Dropout, Flatten
+import os    
+import keras    
+from keras.datasets import cifar10    
+from keras import backend as K    
+from keras.layers import Input, Conv2D, GlobalAveragePooling2D, Dense, BatchNormalization, Activation, MaxPooling2D    
+from keras.models import Model     
+from keras.layers import concatenate, Dropout, Flatten      
 
 from keras import optimizers, regularizers
 from keras.preprocessing.image import ImageDataGenerator
@@ -12,13 +12,13 @@ from keras.initializers import he_normal
 from keras.callbacks import LearningRateScheduler, TensorBoard, ModelCheckpoint
 import matplotlib.pyplot as plt
 
-num_classes = 10
-batch_size = 64
-epochs = 25
-iterations = 782
+num_classes = 10    
+batch_size = 64   
+epochs = 25    
+iterations = 782                                                                    
 DROPOUT = 0.5  # keeping 50%
-CONCAT_AXIS = 3
-DATA_FORMAT = 'channels_last'
+CONCAT_AXIS = 3     
+DATA_FORMAT = 'channels_last'   
 log_filepath = 'C:\\Users\\Esrat Maria\\Desktop\\AlexNet'
 
 
