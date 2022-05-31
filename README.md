@@ -1,4 +1,4 @@
-# AlexNet-Cifar10 
+# AlexNet-Cifar10
 
 In this project I train [Alexnet](https://www.learnopencv.com/understanding-alexnet/) with cifar10 dataset.     
 
