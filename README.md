@@ -1,7 +1,7 @@
 # AlexNet-Cifar10
 
 In this project, I train [Alexnet](https://www.learnopencv.com/understanding-alexnet/) with the cifar10 dataset.
- 
+
 #### Dataset
 
 cifar10 dataset consists of 60000, 32X32 images. More info can be found [here](https://www.cs.toronto.edu/~kriz/cifar.html).
